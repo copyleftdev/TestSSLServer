@@ -21,8 +21,6 @@ node () {
   stage ('Execute Test SSL handshake'){
     sh 'mvn -Djavax.net.debug=ssl:handshake -Dexec.mainClass=org.bolet.TestSSLHandShake -Dexec.args=https://${targetHost} exec:java'
  }
-
- }
  stage ('Execute Test SSL handshake for microsites.efax.com
  '){
    sh 'mvn -Djavax.net.debug=ssl:handshake -Dexec.mainClass=org.bolet.TestSSLHandShake -Dexec.args=https://microsites.efax.com
@@ -389,5 +387,5 @@ node () {
   exec:java'
  }
 
-
+}
 }
