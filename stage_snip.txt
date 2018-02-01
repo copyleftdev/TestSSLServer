@@ -1,0 +1,5 @@
+
+}
+stage ('Execute Test SSL handshake for hostname'){
+  sh 'mvn -Djavax.net.debug=ssl:handshake -Dexec.mainClass=org.bolet.TestSSLHandShake -Dexec.args=https://hostname exec:java'
+}
